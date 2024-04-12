@@ -45,7 +45,7 @@ function deserialize(str) {
     const c = str.charCodeAt(i+1)+ASCII_LEN*o1;
     const o2 = str.charCodeAt(i+2);
     const n = str.charCodeAt(i+3)+ASCII_LEN*o2;
-    out_arr = [...out_arr, Array(n).fill(c)]
+    out_arr = [...out_arr, ...Array(n).fill(c)]
     i += WORD_LEN;
   }
   return out_arr;
